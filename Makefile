@@ -9,7 +9,7 @@ format:
 	black *.py 
 
 lint:
-	pylint --max-line-length=189 my_module.py
+	ruff check *.py mylib/*.py
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < Dockerfile
