@@ -1,10 +1,4 @@
-"""
-Test goes here
+import sqlite3
 
-"""
-
-from mylib.calculator import add
-
-
-def test_add():
-    assert add(1, 2) == 3
+def test_connection():
+    assert sqlite3.connect("GroceryDB.db")
