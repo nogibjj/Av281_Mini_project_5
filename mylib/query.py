@@ -8,7 +8,9 @@ def corn_query():
     conn = sqlite3.connect("GroceryDB.db")
     cursor = conn.cursor()
     cursor.execute(
-        "SELECT general_name, count_products FROM GroceryDB WHERE semantic_tree_name == 'corn'"
+        """SELECT general_name,
+        count_products FROM GroceryDB 
+        WHERE semantic_tree_name == 'corn'"""
     )
     print(
         "Top 5 rows of names and counts from GroceryDB table in the corn semantic tree:"
@@ -23,7 +25,9 @@ def oil_query():
     conn = sqlite3.connect("GroceryDB.db")
     cursor = conn.cursor()
     cursor.execute(
-        "SELECT general_name, count_products FROM GroceryDB WHERE semantic_tree_name == 'oil'"
+        """SELECT general_name, 
+        count_products FROM GroceryDB 
+        WHERE semantic_tree_name == 'oil'"""
     )
     print(
         "Top 5 rows of names and counts from GroceryDB table in the oil semantic tree:"
